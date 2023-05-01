@@ -15,7 +15,6 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
-
 import java.util.HashMap;
 
 public class register extends AppCompatActivity {
@@ -75,6 +74,7 @@ public class register extends AppCompatActivity {
 
                     //Real time database
                     FirebaseDatabase.getInstance().getReference().child("User Details").child("Accounts").updateChildren(map); //use in Hashmap
+
                 }
                 else {
                     Toast.makeText(register.this, "Registration Failed!", Toast.LENGTH_SHORT).show();
